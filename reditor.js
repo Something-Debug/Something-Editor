@@ -1,3 +1,11 @@
+function wait() {
+    do {
+        DoScreenFadeIn(1); 
+        NetworkSessionHost(-1, 32, false); //Attempts reconnection to the session after exiting the editor
+    }
+    while(IsPauseMenuActive()); //If the pause menu is active do above
+}
+
 setTick(() => {
     if(IsControlPressed(1, 288)) { //F1 if you want to change the keybinds to something else see https://docs.fivem.net/docs/game-references/controls/
         StartRecording(1);
@@ -11,11 +19,3 @@ setTick(() => {
         setTimeout(wait, 1); //Calls wait function and waits one millisecond 
     }
 });
-
-function wait() {
-    do {
-        DoScreenFadeIn(1); 
-        NetworkSessionHost(-1, 32, false); //Attempts reconnection to the session after exiting the editor
-    }
-    while(IsPauseMenuActive()); //If the pause menu is active do above
-}
