@@ -10,4 +10,4 @@ F2: Stop recording & save clip
 F3: Open Rockstar Editor
 
 Thanks for downloading! 
-(Don't take credit for this as you didn't make it.) 
+(Please don't take creadit for my work thank you.) 
