@@ -1,6 +1,6 @@
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(0)
+		Citizen.Wait(60)
 		if IsControlPressed(1, 288) then --288 = F1 if you want to change the keybinds to something else see https://docs.fivem.net/docs/game-references/controls/
 			StartRecording(1) 
 		end
@@ -11,8 +11,8 @@ Citizen.CreateThread(function()
 			NetworkSessionEnd(true, true) --End the current session (required if you want R* editor to work)
 			ActivateRockstarEditor() --Activates R* editor
 			while IsPauseMenuActive() do --If the pause menu is active do below
-				Citizen.Wait(0)
-				DoScreenFadeIn(1)
+				Citizen.Wait(60)
+				DoScreenFadeIn(1) --Prevents infinite black loading screen upon exiting R* editor
 				NetworkSessionHost(-1, 32, false) --Attempts reconnection to the session after exiting the editor
 			end
 		end
