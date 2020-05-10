@@ -9,5 +9,7 @@ F2: Stop recording & save clip
 
 F3: Open Rockstar Editor
 
+WARNING! (Rockstar Editor is not offically supported on FiveM. This may lead to client crashes when editing video though shouldn't.) 
+
 Thanks for downloading! 
 (Please don't take credit for my work thank you.) 
