@@ -1,7 +1,6 @@
 function wait() {
     do {
         DoScreenFadeIn(1); 
-        NetworkSessionHost(-1, 32, false); //Attempts reconnection to the session after exiting the editor
     }
     while(IsPauseMenuActive()); //If the pause menu is active do above
 }
@@ -14,7 +13,6 @@ setTick(() => {
         StopRecordingAndSaveClip();
     }
     if(IsControlPressed(1, 170)) { //F3 if you want to change the keybinds to something else see https://docs.fivem.net/docs/game-references/controls/
-        NetworkSessionEnd(true, true); //End the current session (required if you want R* editor to work) 
         ActivateRockstarEditor(); //Activates R* editor
         setTimeout(wait, 60); //Calls wait function and waits 60 millisecond 
     }
